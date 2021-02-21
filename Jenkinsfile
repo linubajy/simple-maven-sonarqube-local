@@ -1,9 +1,12 @@
 pipeline{
-   agent any;
-   tools{
-       maven 'maven'
-       jdk 'JDK11'
-   }
+  agent
+    {
+        docker
+        {
+             image 'maven:3.6.3-jdk-11'
+             args '-v /root/.m2:/root/.m2'
+        }
+    }
   stages {
           stage("build & SonarQube analysis") {
             agent any

@@ -10,12 +10,16 @@ pipeline{
           stage("build & SonarQube analysis") {
             agent any
             steps {
-              withSonarQubeEnv('sonarlocal') {
-                withMaven(maven:'maven') {
-                sh 'mvn sonar:sonar'
+              withSonarQubeEnv('sonarlocal') 
+              {
+                  sh 'java -version'
+                   sh 'mvn clean package sonar:sonar'
               }
-              }  
+             
             }
           }
     }
 }
+
+
+

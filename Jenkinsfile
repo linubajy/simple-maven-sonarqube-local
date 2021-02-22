@@ -10,7 +10,7 @@ pipeline{
           stage("build & SonarQube analysis") {
             agent any
             steps {
-              withSonarQubeEnv('sonarqube') {
+              withSonarQubeEnv('sonarqube-env') {
                 withMaven(maven:'maven') 
                 sh 'mvn sonar:sonar'
               }

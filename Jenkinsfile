@@ -11,9 +11,10 @@ pipeline{
             agent any
             steps {
               withSonarQubeEnv('sonarlocal') {
-                withMaven(maven:'maven') 
+                withMaven(maven:'maven') {
                 sh 'mvn sonar:sonar'
               }
+              }  
             }
           }
     }

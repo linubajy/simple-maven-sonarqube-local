@@ -9,7 +9,7 @@ pipeline{
   stages {
           stage("build & SonarQube analysis") {
             steps {
-              withSonarQubeEnv('sonarlocal') 
+              withSonarQubeEnv('sonar-server') 
               {
                 withMaven(maven:'maven')
                 {

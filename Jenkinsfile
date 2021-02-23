@@ -8,12 +8,11 @@ pipeline{
        
   stages {
           stage("build & SonarQube analysis") {
-            agent any
             steps {
               withSonarQubeEnv('sonarlocal') 
               {
-                  sh 'java -version'
-                   sh 'mvn clean package sonar:sonar'
+                  bat 'java -version'
+                  bat 'mvn clean package sonar:sonar'
               }
              
             }

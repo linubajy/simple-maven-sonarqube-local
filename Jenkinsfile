@@ -12,7 +12,7 @@ pipeline{
               withSonarQubeEnv('sonarlocal') 
               {
                   bat 'java -version'
-                  bat 'mvn clean package sonar:sonar'
+                  bat 'mvn sonar:sonar'
               }
              
             }

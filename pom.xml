@@ -44,12 +44,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-
-	
-    <sonar.host.url>localhost:9000</sonar.host.url>
-    <sonar.log.level>DEBUG</sonar.log.level>
-    <sonar.verbose>true</sonar.verbose>
-    <sonar.coverage.exclusions>**/*.js</sonar.coverage.exclusions>
   </properties>
 
   <dependencies>

@@ -11,10 +11,12 @@ pipeline{
             steps {
               withSonarQubeEnv('sonarlocal') 
               {
+                withMaven(maven:'maven')
+                {
                   bat 'java -version'
                   bat 'mvn sonar:sonar'
               }
-             
+              }
             }
           }
     }
